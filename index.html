@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Wheel of Fortune</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div id="wheel">
+	<div class="firstLayout"></div>
+	<div class="secondLayout"></div>
+	<div class="thirdLayout"></div>
+	<img src="images/brg_00.png" alt="brg">
+	<img src="images/iphone_00.png" alt="iphone">
+	<img src="images/cc_01.png" alt="cc">
+	<img src="images/Honda_logo.png" alt="honda">
+</div>
+
+<div class="arrow">
+	<i class="fa fa-arrow-circle-o-up" aria-hidden="true" onclick="spin()"></i>
+</div>
+
+<script type="text/javascript">
+	
+	function spin(){
+			for(i=0;i<360*(Math.random())*2000;i++){
+				document.getElementById('wheel').style.transform="rotate("+i+"deg)"
+			}
+	}
+
+	var xs = document.getElementsByClassName('fa')[0]
+	var ys = document.getElementById('wheel')
+
+	function lineDistance(){
+
+
+		if(xs - ys)
+
+		return Math.sqrt( xs + ys );
+	}
+</script>
+
+</body>
+</html>
